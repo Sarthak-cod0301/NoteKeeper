@@ -40,7 +40,7 @@ const Register = ({ onLogin }) => {
     try {
       console.log('Attempting registration with:', formData.email); // Debug log
       
-      const response = await axios.post(`${API_URL}/auth/register`, {
+      const response = await axios.post(`${API_URL}/api/auth/register`, {
         username: formData.username,
         email: formData.email,
         password: formData.password
