@@ -4,13 +4,12 @@ import {
   FaPlusCircle, 
   FaUserCircle,
   FaBars,
-  FaTimes
+  FaTimes,
+  FaSignOutAlt
 } from 'react-icons/fa';
 import '../../styles/Sidebar.css';
 
-const Sidebar = ({ activeTab, setActiveTab, user, onLogout, counts = {} }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Sidebar = ({ activeTab, setActiveTab, user, onLogout, isOpen, toggleSidebar, counts = {} }) => {
   const menuItems = [
     { 
       id: 'notes', 
@@ -32,13 +31,11 @@ const Sidebar = ({ activeTab, setActiveTab, user, onLogout, counts = {} }) => {
     },
   ];
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleMenuItemClick = (id) => {
     setActiveTab(id);
-    setIsOpen(false); // Close sidebar on mobile after clicking
+    if (window.innerWidth <= 768) {
+      toggleSidebar(); // Close sidebar on mobile after clicking
+    }
   };
 
   return (
@@ -82,6 +79,13 @@ const Sidebar = ({ activeTab, setActiveTab, user, onLogout, counts = {} }) => {
             </button>
           ))}
         </nav>
+
+        {/* Logout Button - Added at the bottom */}
+        <div className="sidebar-footer">
+          <button className="sidebar-logout-btn" onClick={onLogout}>
+            <FaSignOutAlt /> Logout
+          </button>
+        </div>
       </div>
 
       {/* Overlay */}
