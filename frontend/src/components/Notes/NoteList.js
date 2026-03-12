@@ -23,7 +23,7 @@ const NoteList = ({ user, updateNoteCount, showCreateForm = false }) => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      let url = `${API_URL}/notes?`;
+      let url = `${API_URL}/api/notes?`;
       if (searchTerm) url += `search=${searchTerm}&`;
 
       const response = await axios.get(url, {
@@ -49,7 +49,7 @@ const NoteList = ({ user, updateNoteCount, showCreateForm = false }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        `${API_URL}/notes`,
+        `${API_URL}/api/notes`,
         noteData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -70,7 +70,7 @@ const NoteList = ({ user, updateNoteCount, showCreateForm = false }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `${API_URL}/notes/${id}`,
+        `${API_URL}/api/notes/${id}`,
         noteData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -86,7 +86,7 @@ const NoteList = ({ user, updateNoteCount, showCreateForm = false }) => {
   const handleDeleteNote = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`${API_URL}/notes/${id}`, {
+      await axios.delete(`${API_URL}/api/notes/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -105,7 +105,7 @@ const NoteList = ({ user, updateNoteCount, showCreateForm = false }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.patch(
-        `${API_URL}/notes/${id}/pin`,
+        `${API_URL}/api/notes/${id}/pin`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
