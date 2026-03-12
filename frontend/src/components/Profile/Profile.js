@@ -20,7 +20,7 @@ const Profile = ({ user, updateNoteCount }) => {
       const token = localStorage.getItem('token');
       
       // Fetch all notes
-      const notesResponse = await axios.get(`${API_URL}/notes`, {
+      const notesResponse = await axios.get(`${API_URL}/api/notes`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
