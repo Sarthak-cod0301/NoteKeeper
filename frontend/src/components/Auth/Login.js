@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${API_URL}/auth/login`, formData);
+      const response = await axios.post(`${API_URL}/api/auth/login`, formData);
       onLogin(response.data.token, response.data.user);
       toast.success('Login successful!');
       navigate('/notes');
