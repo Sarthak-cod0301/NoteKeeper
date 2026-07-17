@@ -24,19 +24,18 @@
   transform: scale(1.05);
 }
 
-/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 280px;
   height: 100vh;
-  background: white;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease;
+  background: #fff;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  transition: left 0.3s ease;
 }
 
 
