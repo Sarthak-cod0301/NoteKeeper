@@ -80,13 +80,15 @@ const Sidebar = ({ activeTab, setActiveTab, user, onLogout, isOpen, toggleSideba
           ))}
         </nav>
 
-        {/* Logout Button - Added at the bottom */}
-        <div className="sidebar-footer">
-          <button className="sidebar-logout-btn" onClick={onLogout}>
-            <FaSignOutAlt /> Logout
-          </button>
-        </div>
-      </div>
+    <div className="sidebar-footer">
+    <button
+        className="sidebar-logout-btn"
+        onClick={onLogout}
+    >
+        <FaSignOutAlt />
+        Logout
+    </button>
+</div>
 
       {/* Overlay */}
       {isOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
