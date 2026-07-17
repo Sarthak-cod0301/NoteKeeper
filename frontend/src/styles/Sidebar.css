@@ -228,4 +228,31 @@
   }
 }
 
+/* Desktop */
+.sidebar-close-btn {
+  display: none;
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+
+  .sidebar-menu-btn {
+    display: flex;
+  }
+
+  .sidebar {
+    left: -280px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-close-btn {
+    display: flex;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
