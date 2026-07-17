@@ -28,7 +28,7 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0;
   width: 280px;
   height: 100vh;
   background: white;
@@ -39,9 +39,6 @@
   flex-direction: column;
 }
 
-.sidebar.open {
-  left: 0;
-}
 
 /* Sidebar Header */
 .sidebar-header {
@@ -234,20 +231,19 @@
 
 /* Main Content Adjustment */
 .main-content {
-  margin-left: 0;
+  margin-left: 280px;
   padding: 20px;
   min-height: 100vh;
   background: #f9fafb;
-  transition: margin-left 0.3s ease;
-  padding-top: 80px;
+  transition: all .3s ease;
 }
 
 .main-content.sidebar-open {
   margin-left: 280px;
 }
 
-@media (max-width: 768px) {
-  .main-content.sidebar-open {
-    margin-left: 0;
+@media (max-width:768px){
+  .main-content{
+    margin-left:0;
   }
 }
