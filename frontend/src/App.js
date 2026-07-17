@@ -38,13 +38,15 @@ function App() {
     setUser(user);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    setIsAuthenticated(false);
-    setUser(null);
-    setActiveTab('notes');
-  };
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+
+  setIsAuthenticated(false);
+  setUser(null);
+  setActiveTab("notes");
+  setSidebarOpen(false);
+};
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
