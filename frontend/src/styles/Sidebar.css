@@ -229,21 +229,4 @@
   }
 }
 
-/* Main Content Adjustment */
-.main-content {
-  margin-left: 280px;
-  padding: 20px;
-  min-height: 100vh;
-  background: #f9fafb;
-  transition: all .3s ease;
-}
 
-.main-content.sidebar-open {
-  margin-left: 280px;
-}
-
-@media (max-width:768px){
-  .main-content{
-    margin-left:0;
-  }
-}
