@@ -73,11 +73,30 @@ const handleLogout = () => {
               toggleSidebar={toggleSidebar}
               counts={counts}
             />
-            <main className="main-content">
-              {activeTab === 'notes' && <NoteList user={user} updateNoteCount={updateNoteCount} showCreateForm={false} />}
-              {activeTab === 'create' && <NoteList user={user} updateNoteCount={updateNoteCount} showCreateForm={true} />}
-              {activeTab === 'profile' && <Profile user={user} updateNoteCount={updateNoteCount} />}
-            </main>
+           <main className="main-content">
+  {activeTab === "notes" && (
+    <NoteList
+      user={user}
+      updateNoteCount={updateNoteCount}
+      showCreateForm={false}
+    />
+  )}
+
+  {activeTab === "create" && (
+    <NoteList
+      user={user}
+      updateNoteCount={updateNoteCount}
+      showCreateForm={true}
+    />
+  )}
+
+  {activeTab === "profile" && (
+    <Profile
+      user={user}
+      updateNoteCount={updateNoteCount}
+    />
+  )}
+</main>
           </div>
         ) : (
           <Routes>
