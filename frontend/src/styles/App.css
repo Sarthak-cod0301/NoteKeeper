@@ -642,24 +642,19 @@ body {
   background: #fee2e2;
 }
 
-/* Main Content Layout */
-.app-container {
-  display: flex;
-  min-height: 100vh;
-}
-
 .main-content {
   flex: 1;
   margin-left: 280px;
-  padding: 2rem;
-  background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
   min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  transition: all .3s ease;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    margin-left: 80px;
-    padding: 1rem;
+@media (max-width:768px){
+  .main-content{
+    margin-left:0;
+    padding:20px;
   }
 }
 /* Note Card Attachments Styles */
