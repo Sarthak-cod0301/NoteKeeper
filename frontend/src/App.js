@@ -71,7 +71,7 @@ function App() {
               toggleSidebar={toggleSidebar}
               counts={counts}
             />
-            <main className={`main-content ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
+            <main className="main-content">
               {activeTab === 'notes' && <NoteList user={user} updateNoteCount={updateNoteCount} showCreateForm={false} />}
               {activeTab === 'create' && <NoteList user={user} updateNoteCount={updateNoteCount} showCreateForm={true} />}
               {activeTab === 'profile' && <Profile user={user} updateNoteCount={updateNoteCount} />}
