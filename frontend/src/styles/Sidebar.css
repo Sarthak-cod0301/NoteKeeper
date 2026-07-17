@@ -248,9 +248,7 @@
     left: 0;
   }
 
-  .sidebar-close-btn {
-    display: flex;
-  }
+
 
   .sidebar-overlay {
     display: block;
